@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open-Meteo Weather & Air Quality Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="logo">Weather & Air Quality Explorer</div>
+    <nav>
+      <button id="nav-weather" class="nav-btn active">Weather Forecast</button>
+      <button id="nav-air" class="nav-btn">Air Quality Data</button>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container">
+    <section id="view-title" class="view-header">
+      <!-- Dynamic Title Injected Here -->
+    </section>
+
+    <!-- Status Message (Loading / Error) -->
+    <div id="status-message" class="status-message"></div>
+
+    <!-- Data Display Area -->
+    <div id="content-display" class="content-display"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Data provided by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo API</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
