@@ -1,0 +1,263 @@
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border-color: #cbd5e1;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header & Navigation */
+  header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-btn {
+    background: #334155;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .nav-btn:hover {
+    background: #475569;
+  }
+  
+  .nav-btn.active {
+    background: var(--accent-color);
+    font-weight: 600;
+  }
+  
+  /* Main Container */
+  .container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+    width: 100%;
+  }
+  
+  .view-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .view-header h1 {
+    font-size: 1.8rem;
+    color: var(--text-main);
+  }
+
+  .view-header p {
+    color: var(--text-muted);
+    margin-top: 0.35rem;
+  }
+  
+  /* Cards & Layout */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card h2, .card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+  }
+  
+  .data-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .data-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .data-list li:last-child {
+    border-bottom: none;
+  }
+
+  .current-weather {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .eyebrow {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .condition {
+    color: var(--text-muted);
+    margin-top: 0.35rem;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .metric {
+    border-left: 3px solid var(--accent-color);
+    padding: 0.45rem 0 0.45rem 0.7rem;
+  }
+
+  .metric span,
+  .metric strong {
+    display: block;
+  }
+
+  .metric span {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .metric strong {
+    margin-top: 0.15rem;
+  }
+
+  .aqi-reading {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .aqi-value {
+    color: var(--accent-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    border: 1px solid var(--border-color);
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f1f5f9;
+    font-weight: 600;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  .forecast-table {
+    min-width: 650px;
+  }
+  
+  /* Status Feedback */
+  .status-message {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 3rem 0;
+  }
+  
+  .error-text {
+    color: #dc2626;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.85rem;
+  }
+  
+  footer a {
+    color: #38bdf8;
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    header {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+
+    nav {
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    .nav-btn {
+      flex: 1;
+      padding: 0.6rem 0.5rem;
+    }
+
+    .container {
+      margin: 1.25rem auto;
+      padding: 0 1rem;
+    }
+
+    .current-weather {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      padding: 1rem;
+    }
+  }
