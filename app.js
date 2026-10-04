@@ -3,15 +3,13 @@ const airButton = document.querySelector("#nav-air");
 const title = document.querySelector("#view-title");
 const statusMessage = document.querySelector("#status-message");
 const content = document.querySelector("#content-display");
-
-const locationName = "40.2415 N, 75.2838 W";
+const locationName = "40.2415 N, 75.2838 W Lansdale PA";
 let latestRequest = 0;
 
-const weatherApi =
-  "https://api.open-meteo.com/v1/forecast?latitude=40.2415&longitude=-75.2838&hourly=temperature_2m";
+
+const weatherApi = CONFIG.WEATHER_API_URL;
 const airQuality = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=40.2415&longitude=-75.2838&hourly=grass_pollen&current=grass_pollen"
 
-  // "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=40.2415&longitude=-75.2838&hourly=pm10,pm2_5";
 
 const weatherUrl =
   "https://api.open-meteo.com/v1/forecast" +
@@ -233,7 +231,7 @@ async function loadView(view) {
 
     title.innerHTML = `<h1>${
       view === "weather" ? "Weather forecast" : "Air quality"
-    }</h1>`;
+    }</h1>`
     showMessage(`Unable to load data. ${error.message}`, true);
   }
 }
