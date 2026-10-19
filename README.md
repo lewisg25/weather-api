@@ -8,3 +8,7 @@ A responsive web application built with Vanilla JavaScript, HTML, and CSS for th
 - Endpoint 2 (Air Quality):Displays live pollutant counts (PM2.5, PM10, CO, NO₂) and US AQI index from Open-Meteo's endpoint.
 - Dynamic Single-Page Navigation: Switch views seamlessly without full page reloads or redundant data calls.
 - Error & Loading Feedback: Provides visible feedback when loading data or handling network issues.
+
+1. Clone or Download the Repository
+If you are using Git, clone the repository to your local machine
+git clone
