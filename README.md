@@ -12,3 +12,4 @@ A responsive web application built with Vanilla JavaScript, HTML, and CSS for th
 1. Clone or Download the Repository
 If you are using Git, clone the repository to your local machine
 git clone
+https://github.com/lewisg25/weather-api.git
